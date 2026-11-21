@@ -1,6 +1,6 @@
 # Ex05 - Image Carousel
 
-**Date:** 21.11.2026
+# Date: 21.11.2026
 
 ## Aim
 To create an image carousel using React.
@@ -112,7 +112,7 @@ p {
 }
 ```
 
-### `image/src/App.jsx`
+App.jsx
 
 ```jsx
 import { useState, useEffect } from "react";
