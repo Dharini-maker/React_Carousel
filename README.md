@@ -176,9 +176,8 @@ p {
 
 ## OUTPUT
 
-![alt text](i1.jpg)
+![alt text](../i1.jpg)
 
-![alt text](i2.jpg)
-
+![alt text](../i2.jpg)
 ## RESULT
 The program for creating Image Carousel using React is executed successfully.
