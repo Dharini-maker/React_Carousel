@@ -32,22 +32,56 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Image Carousel</h1>
 
-      <div className="carousel">
-        <img
-          src={images[currentIndex]}
-          alt="Carousel"
-        />
+      <div className="decoration circle1"></div>
+      <div className="decoration circle2"></div>
+      <div className="decoration circle3"></div>
+      <div className="decoration circle4"></div>
 
-        <div className="controls">
-          <button onClick={previousImage}>❮ Previous</button>
-          <button onClick={nextImage}>Next ❯</button>
+      <div className="content">
+        <h1>✦ Image Carousel ✦</h1>
+        <p className="subtitle">Explore the beauty of nature</p>
+
+        <div className="carousel">
+
+          <div className="image-wrapper">
+            <img
+              src={images[currentIndex]}
+              alt="Nature landscape"
+              key={currentIndex}
+            />
+          </div>
+
+          <div className="controls">
+            <button onClick={previousImage}>
+              ❮ Previous
+            </button>
+
+            <button onClick={nextImage}>
+              Next ❯
+            </button>
+          </div>
+
+          <div className="dots">
+            {images.map((image, index) => (
+              <span
+                key={index}
+                className={currentIndex === index ? "active" : ""}
+                onClick={() => setCurrentIndex(index)}
+              ></span>
+            ))}
+          </div>
+
+          <p className="counter">
+            Image {currentIndex + 1} of {images.length}
+          </p>
+
         </div>
 
-        <p>
-          Image {currentIndex + 1} of {images.length}
-        </p>
+        <footer>
+          <p>✧ Developed by Dharini S ✧</p>
+          <p className="footer-text">React JS | useState | useEffect</p>
+        </footer>
       </div>
     </div>
   );
